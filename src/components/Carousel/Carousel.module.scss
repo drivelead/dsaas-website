@@ -1,0 +1,95 @@
+@use '@carbon/react/scss/breakpoint' as bp;
+@use '@carbon/react/scss/motion' as m;
+
+// ─── Root ─────────────────────────────────────────────────────────────────────
+
+.root {
+  position: relative;
+  width: 100%;
+}
+
+// ─── Arrow header ─────────────────────────────────────────────────────────────
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: var(--cds-spacing-05);
+  // Match Carbon full-width grid margins so arrows sit at the same indent as nav
+  padding-inline: 0;
+
+  @include bp.breakpoint('md') {
+    padding-inline: var(--cds-spacing-05);
+  }
+
+  @include bp.breakpoint('max') {
+    padding-inline: var(--cds-spacing-06);
+  }
+}
+
+.arrows {
+  display: flex;
+  gap: var(--cds-spacing-02);
+}
+
+// ─── Scroll viewport ──────────────────────────────────────────────────────────
+
+.viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+// ─── Draggable track ──────────────────────────────────────────────────────────
+
+.track {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: var(--cds-spacing-05);
+  // Padding-inline matches Carbon full-width grid margins so first/last card
+  // edge-aligns with content above and below the carousel.
+  padding-inline: 0;
+  user-select: none;
+  will-change: transform;
+  cursor: grab;
+
+  @include bp.breakpoint('md') {
+    padding-inline: var(--cds-spacing-05);
+  }
+
+  @include bp.breakpoint('max') {
+    padding-inline: var(--cds-spacing-06);
+  }
+}
+
+.trackDragging {
+  cursor: grabbing;
+
+  // Prevent interaction with card links/buttons while dragging
+  * {
+    pointer-events: none;
+  }
+}
+
+// ─── Card slot ────────────────────────────────────────────────────────────────
+
+.card {
+  flex: 0 0 auto;
+  // sm: show one card plus the leading edge of the next
+  width: 82vw;
+
+  @include bp.breakpoint('md') {
+    // md: ~2.2 cards visible
+    width: 46vw;
+  }
+
+  @include bp.breakpoint('lg') {
+    // lg: ~3.2 cards visible
+    width: 30vw;
+  }
+
+  @include bp.breakpoint('xlg') {
+    // xlg: ~3.5 cards visible
+    width: 26vw;
+  }
+}

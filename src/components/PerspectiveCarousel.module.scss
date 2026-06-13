@@ -1,0 +1,65 @@
+@use '@carbon/react/scss/motion' as m;
+
+// ─── Card link wrapper ────────────────────────────────────────────────────────
+
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+// ─── Card inner ───────────────────────────────────────────────────────────────
+
+.cardInner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--cds-spacing-07);
+  background-color: var(--cds-layer-01);
+  border: 1px solid var(--cds-border-subtle-01);
+  // Carbon productive standard easing, moderate-01 duration for border hover
+  transition-property: border-color;
+  transition-duration: m.$duration-moderate-01;
+  transition-timing-function: m.motion('standard', 'productive');
+
+  &:hover {
+    border-color: var(--cds-border-subtle-02);
+  }
+}
+
+// ─── Metadata row ─────────────────────────────────────────────────────────────
+
+.cardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cds-spacing-04);
+  margin-bottom: var(--cds-spacing-05);
+}
+
+// Override the default bottom margin the .dsaas-eyebrow global adds
+.cardEyebrow {
+  margin-bottom: 0;
+}
+
+// ─── Title ────────────────────────────────────────────────────────────────────
+
+.cardTitle {
+  color: var(--cds-text-primary);
+  margin-bottom: var(--cds-spacing-04);
+  // Transition colour on hover via the parent link
+  transition-property: color;
+  transition-duration: m.$duration-fast-02;
+  transition-timing-function: m.motion('standard', 'productive');
+
+  .cardLink:hover & {
+    color: var(--cds-link-primary);
+  }
+}
+
+// ─── Abstract ─────────────────────────────────────────────────────────────────
+
+.cardAbstract {
+  color: var(--cds-text-secondary);
+  margin-top: auto;
+}

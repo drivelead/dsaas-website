@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { Grid, Column } from '@carbon/react';
-import { articles, formatDate } from '@/data/articles';
+import { articles } from '@/data/articles';
+import { PerspectiveCarousel } from '@/components/PerspectiveCarousel';
 
 export const metadata: Metadata = {
   title: 'Perspective',
@@ -23,33 +23,11 @@ export default function PerspectivePage() {
         </Grid>
       </section>
 
-      <section>
-        <Grid fullWidth>
-          <Column lg={{ span: 10, offset: 2 }} md={8} sm={4}>
-            {articles.map((article) => (
-              <Link
-                key={article.slug}
-                href={`/perspective/${article.slug}`}
-                className="dsaas-article-card"
-              >
-                <div className="dsaas-article-card__meta">
-                  <span className="dsaas-eyebrow" style={{ marginBottom: 0 }}>
-                    {article.category}
-                  </span>
-                  <span className="dsaas-eyebrow" style={{ marginBottom: 0 }}>
-                    {formatDate(article.date)}
-                  </span>
-                </div>
-                <h2 className="cds--productive-heading-04 dsaas-article-card__title">
-                  {article.title}
-                </h2>
-                <p className="cds--body-long-01 dsaas-article-card__abstract">
-                  {article.abstract}
-                </p>
-              </Link>
-            ))}
-          </Column>
-        </Grid>
+      <section
+        className="dsaas-section dsaas-section--last"
+        style={{ paddingLeft: 0, paddingRight: 0 }}
+      >
+        <PerspectiveCarousel articles={articles} />
       </section>
     </>
   );
