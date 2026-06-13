@@ -31,6 +31,18 @@ export default function AboutPage() {
               and platforms, without becoming a constraint on any of them.
             </p>
 
+            <div className="dsaas-inclusion-section">
+              <p className="dsaas-eyebrow">Inclusion and equal opportunities</p>
+              <p className="cds--body-long-02">
+                DSAAS hires and works with people on merit, and we make reasonable adjustments
+                wherever they are needed, for our own team and for anyone we engage on a project.
+              </p>
+              <p className="cds--body-long-02">
+                A system that excludes users is inconsistent with itself. The same principle applies
+                to how we build our team and choose who we work with.
+              </p>
+            </div>
+
             <div className="dsaas-about-footnote">
               <p className="dsaas-footnote-label">Note</p>
               <p className="cds--body-short-01">

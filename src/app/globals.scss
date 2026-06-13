@@ -269,3 +269,269 @@
     color: var(--cds-link-primary-hover);
   }
 }
+
+.dsaas-footer__legal-row {
+  margin-top: var(--cds-spacing-06);
+  padding-top: var(--cds-spacing-05);
+  border-top: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-footer__legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cds-spacing-03) var(--cds-spacing-05);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dsaas-footer__legal-nav a {
+  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cds-text-disabled);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--cds-link-primary-hover);
+  }
+}
+
+// ─── Observation section (Home) ───────────────────────────────────────────────
+
+.dsaas-observation {
+  padding-top: var(--cds-spacing-10);
+  padding-bottom: var(--cds-spacing-10);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-observation p + p {
+  margin-top: var(--cds-spacing-06);
+}
+
+.dsaas-observation__thesis {
+  color: var(--cds-text-primary);
+}
+
+// ─── Approach brief (Home) ────────────────────────────────────────────────────
+
+.dsaas-approach-brief {
+  padding-top: var(--cds-spacing-10);
+  padding-bottom: var(--cds-spacing-10);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-approach-brief__intro {
+  margin-bottom: var(--cds-spacing-07);
+  color: var(--cds-text-secondary);
+}
+
+.dsaas-discipline-brief-item {
+  padding-top: var(--cds-spacing-06);
+  padding-bottom: var(--cds-spacing-06);
+  border-top: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-discipline-brief-item__label {
+  display: block;
+  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cds-text-secondary);
+  text-decoration: none;
+  margin-bottom: var(--cds-spacing-03);
+
+  &:hover {
+    color: var(--cds-link-primary-hover);
+  }
+}
+
+.dsaas-discipline-brief-item__short {
+  color: var(--cds-text-secondary);
+}
+
+.dsaas-approach-brief__cta {
+  margin-top: var(--cds-spacing-08);
+}
+
+// ─── Insights teaser (Home) ───────────────────────────────────────────────────
+
+.dsaas-insights-teaser {
+  padding-top: var(--cds-spacing-10);
+  padding-bottom: var(--cds-spacing-10);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-insights-teaser__intro {
+  margin-bottom: var(--cds-spacing-07);
+  color: var(--cds-text-secondary);
+}
+
+.dsaas-insight-entry {
+  padding-top: var(--cds-spacing-06);
+  padding-bottom: var(--cds-spacing-06);
+  border-top: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-insight-entry__title-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-top: var(--cds-spacing-03);
+  margin-bottom: var(--cds-spacing-03);
+
+  h3 {
+    color: var(--cds-text-primary);
+    transition: color 70ms ease;
+  }
+
+  &:hover h3 {
+    color: var(--cds-link-primary-hover);
+  }
+}
+
+.dsaas-insight-entry__abstract {
+  color: var(--cds-text-secondary);
+  margin-bottom: var(--cds-spacing-05);
+}
+
+.dsaas-insight-entry__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cds-spacing-05);
+  align-items: center;
+}
+
+.dsaas-insight-entry__area-link {
+  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cds-text-secondary);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--cds-link-primary-hover);
+  }
+}
+
+// ─── Final CTA (Home) ─────────────────────────────────────────────────────────
+
+.dsaas-final-cta {
+  padding-top: var(--cds-spacing-11);
+  padding-bottom: var(--cds-spacing-11);
+}
+
+// ─── Approach discipline sections ─────────────────────────────────────────────
+
+.dsaas-approach-intro {
+  padding-top: var(--cds-spacing-09);
+  padding-bottom: var(--cds-spacing-09);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-approach-intro p + p {
+  margin-top: var(--cds-spacing-06);
+}
+
+.dsaas-discipline-section {
+  padding-top: var(--cds-spacing-09);
+  padding-bottom: var(--cds-spacing-09);
+  border-top: 1px solid var(--cds-border-subtle-01);
+
+  &:last-child {
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+  }
+}
+
+.dsaas-discipline-section__short {
+  color: var(--cds-text-primary);
+  margin-bottom: var(--cds-spacing-06);
+}
+
+.dsaas-discipline-section__body {
+  color: var(--cds-text-secondary);
+}
+
+// ─── Perspective grouped sections ─────────────────────────────────────────────
+
+.dsaas-area-section {
+  padding-top: var(--cds-spacing-09);
+  padding-bottom: var(--cds-spacing-08);
+  border-top: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-area-section__header {
+  margin-bottom: var(--cds-spacing-06);
+}
+
+.dsaas-area-article {
+  display: block;
+  padding-top: var(--cds-spacing-06);
+  padding-bottom: var(--cds-spacing-06);
+  border-top: 1px solid var(--cds-border-subtle-01);
+  color: inherit;
+  text-decoration: none;
+
+  &:last-child {
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+  }
+
+  &:hover .dsaas-area-article__title {
+    color: var(--cds-link-primary-hover);
+  }
+}
+
+.dsaas-area-article__title {
+  color: var(--cds-text-primary);
+  margin-bottom: var(--cds-spacing-02);
+  transition: color 70ms ease;
+}
+
+.dsaas-area-article__abstract {
+  color: var(--cds-text-secondary);
+}
+
+// ─── About inclusion section ──────────────────────────────────────────────────
+
+.dsaas-inclusion-section {
+  padding-top: var(--cds-spacing-09);
+  border-top: 1px solid var(--cds-border-subtle-01);
+  margin-top: var(--cds-spacing-10);
+}
+
+.dsaas-inclusion-section p + p {
+  margin-top: var(--cds-spacing-05);
+}
+
+// ─── Legal pages ──────────────────────────────────────────────────────────────
+
+.dsaas-legal-intro {
+  padding-top: var(--cds-spacing-09);
+  padding-bottom: var(--cds-spacing-08);
+  color: var(--cds-text-secondary);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-legal-section {
+  padding-top: var(--cds-spacing-07);
+  padding-bottom: var(--cds-spacing-07);
+  border-top: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-legal-section h2 {
+  margin-bottom: var(--cds-spacing-05);
+}
+
+.dsaas-legal-section p + p {
+  margin-top: var(--cds-spacing-05);
+}
+
+.dsaas-legal-meta {
+  padding-top: var(--cds-spacing-07);
+  padding-bottom: var(--cds-spacing-09);
+  border-top: 1px solid var(--cds-border-subtle-01);
+  color: var(--cds-text-secondary);
+}

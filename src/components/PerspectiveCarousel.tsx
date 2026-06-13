@@ -11,7 +11,7 @@ function ArticleCard({ article }: { article: Article }) {
     <a href={`/perspective/${article.slug}`} className={styles.cardLink}>
       <div className={styles.cardInner}>
         <div className={styles.cardMeta}>
-          <span className={`dsaas-eyebrow ${styles.cardEyebrow}`}>{article.category}</span>
+          <span className={`dsaas-eyebrow ${styles.cardEyebrow}`}>{article.area}</span>
           <span className={`dsaas-eyebrow ${styles.cardEyebrow}`}>{formatDate(article.date)}</span>
         </div>
         {/* dsaas-article__title applies IBM Plex Serif — Perspective articles only */}

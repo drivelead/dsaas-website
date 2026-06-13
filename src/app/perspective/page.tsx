@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Grid, Column } from '@carbon/react';
-import { articles } from '@/data/articles';
-import { PerspectiveCarousel } from '@/components/PerspectiveCarousel';
+import { areaGroups, getArticlesByArea } from '@/data/articles';
 
 export const metadata: Metadata = {
   title: 'Perspective',
@@ -23,11 +22,40 @@ export default function PerspectivePage() {
         </Grid>
       </section>
 
-      <section
-        className="dsaas-section dsaas-section--last"
-        style={{ paddingLeft: 0, paddingRight: 0 }}
-      >
-        <PerspectiveCarousel articles={articles} />
+      <section>
+        <Grid fullWidth>
+          <Column lg={{ span: 10, offset: 2 }} md={8} sm={4}>
+            {areaGroups.map((group) => {
+              const groupArticles = getArticlesByArea(group.slug);
+              return (
+                <div
+                  key={group.slug}
+                  id={group.slug}
+                  className="dsaas-area-section"
+                >
+                  <div className="dsaas-area-section__header">
+                    <p className="dsaas-eyebrow">{group.disciplineLabel}</p>
+                    <h2 className="cds--productive-heading-04">{group.label}</h2>
+                  </div>
+                  {groupArticles.map((article) => (
+                    <a
+                      key={article.slug}
+                      href={`/perspective/${article.slug}`}
+                      className="dsaas-area-article"
+                    >
+                      <h3 className="cds--productive-heading-03 dsaas-area-article__title">
+                        {article.title}
+                      </h3>
+                      <p className="cds--body-long-01 dsaas-area-article__abstract">
+                        {article.abstract}
+                      </p>
+                    </a>
+                  ))}
+                </div>
+              );
+            })}
+          </Column>
+        </Grid>
       </section>
     </>
   );
