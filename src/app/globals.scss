@@ -1,0 +1,271 @@
+// Carbon g100 theme — must precede all other Carbon imports
+@use '@carbon/react/scss/themes' as themes;
+@use '@carbon/react/scss/theme' with (
+  $theme: themes.$g100
+);
+
+// Full Carbon component styles
+@use '@carbon/react';
+
+// ─── Font overrides ───────────────────────────────────────────────────────────
+// IBM Plex Mono: navigation labels, eyebrows, metadata, footer
+// Applied via CSS custom property injected by next/font/google
+
+.cds--header__nav-item--link,
+.cds--header__menu-item {
+  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: var(--cds-label-letter-spacing, 0.05em);
+}
+
+.cds--side-nav__link-text {
+  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: var(--cds-label-letter-spacing, 0.05em);
+}
+
+// Utility classes for eyebrows and metadata throughout the site
+.dsaas-eyebrow {
+  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  color: var(--cds-text-secondary);
+  margin-bottom: var(--cds-spacing-04);
+}
+
+// ─── Page structure ───────────────────────────────────────────────────────────
+
+.dsaas-page {
+  min-height: 100vh;
+  background-color: var(--cds-background);
+  padding-top: 3rem; // Carbon header height
+}
+
+// ─── Sections ─────────────────────────────────────────────────────────────────
+
+.dsaas-hero {
+  padding-top: var(--cds-spacing-12);
+  padding-bottom: var(--cds-spacing-12);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-section {
+  padding-top: var(--cds-spacing-10);
+  padding-bottom: var(--cds-spacing-10);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-section--last {
+  border-bottom: none;
+}
+
+// ─── Hero typography ──────────────────────────────────────────────────────────
+
+.dsaas-hero__headline {
+  margin-bottom: var(--cds-spacing-06);
+}
+
+.dsaas-hero__subline {
+  color: var(--cds-text-secondary);
+  max-width: 40rem;
+  margin-bottom: var(--cds-spacing-09);
+}
+
+// ─── Capability threads ───────────────────────────────────────────────────────
+
+.dsaas-thread {
+  padding-top: var(--cds-spacing-07);
+  border-top: 1px solid var(--cds-border-subtle-01);
+  margin-bottom: var(--cds-spacing-07);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.dsaas-thread__text {
+  color: var(--cds-text-secondary);
+  margin-top: var(--cds-spacing-04);
+}
+
+// ─── Continuum statement ──────────────────────────────────────────────────────
+
+.dsaas-continuum {
+  padding-top: var(--cds-spacing-10);
+  padding-bottom: var(--cds-spacing-09);
+  border-top: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-continuum__text {
+  margin-bottom: var(--cds-spacing-07);
+}
+
+// ─── Page headline ────────────────────────────────────────────────────────────
+
+.dsaas-page-headline {
+  margin-bottom: var(--cds-spacing-09);
+  padding-top: var(--cds-spacing-11);
+  padding-bottom: var(--cds-spacing-09);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+}
+
+// ─── Body copy ────────────────────────────────────────────────────────────────
+
+.dsaas-body-section {
+  padding-top: var(--cds-spacing-09);
+  padding-bottom: var(--cds-spacing-09);
+}
+
+.dsaas-body-section p + p {
+  margin-top: var(--cds-spacing-06);
+}
+
+// ─── Perspective index ────────────────────────────────────────────────────────
+
+.dsaas-perspective-intro {
+  padding-top: var(--cds-spacing-10);
+  padding-bottom: var(--cds-spacing-08);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+  color: var(--cds-text-secondary);
+}
+
+.dsaas-article-card {
+  padding-top: var(--cds-spacing-07);
+  padding-bottom: var(--cds-spacing-07);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+  display: block;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover .dsaas-article-card__title {
+    color: var(--cds-link-primary-hover);
+  }
+}
+
+.dsaas-article-card__meta {
+  display: flex;
+  gap: var(--cds-spacing-05);
+  margin-bottom: var(--cds-spacing-04);
+}
+
+.dsaas-article-card__title {
+  color: var(--cds-text-primary);
+  margin-bottom: var(--cds-spacing-03);
+  transition: color 70ms ease;
+}
+
+.dsaas-article-card__abstract {
+  color: var(--cds-text-secondary);
+}
+
+// ─── Article page ─────────────────────────────────────────────────────────────
+
+.dsaas-article {
+  padding-top: var(--cds-spacing-11);
+}
+
+.dsaas-article__header {
+  padding-bottom: var(--cds-spacing-09);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+  margin-bottom: var(--cds-spacing-09);
+}
+
+// IBM Plex Serif applied only within Perspective article headings
+.dsaas-article__title {
+  font-family: var(--font-plex-serif), 'IBM Plex Serif', serif;
+  color: var(--cds-text-primary);
+  margin-bottom: var(--cds-spacing-05);
+}
+
+.dsaas-article__abstract {
+  color: var(--cds-text-secondary);
+  margin-top: var(--cds-spacing-06);
+}
+
+.dsaas-article__coming-soon {
+  padding-top: var(--cds-spacing-09);
+  padding-bottom: var(--cds-spacing-09);
+  color: var(--cds-text-secondary);
+  border-top: 1px solid var(--cds-border-subtle-01);
+}
+
+// ─── About page ───────────────────────────────────────────────────────────────
+
+.dsaas-about-footnote {
+  padding-top: var(--cds-spacing-09);
+  border-top: 1px solid var(--cds-border-subtle-01);
+  margin-top: var(--cds-spacing-10);
+  color: var(--cds-text-secondary);
+}
+
+.dsaas-footnote-label {
+  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cds-text-disabled);
+  margin-bottom: var(--cds-spacing-03);
+}
+
+// ─── Contact page ─────────────────────────────────────────────────────────────
+
+.dsaas-contact-form {
+  padding-top: var(--cds-spacing-09);
+  padding-bottom: var(--cds-spacing-13);
+}
+
+.dsaas-form-field + .dsaas-form-field {
+  margin-top: var(--cds-spacing-06);
+}
+
+.dsaas-form-submit {
+  margin-top: var(--cds-spacing-08);
+}
+
+.dsaas-form-success {
+  padding: var(--cds-spacing-07);
+  border: 1px solid var(--cds-border-subtle-01);
+  color: var(--cds-text-secondary);
+}
+
+// ─── Footer ───────────────────────────────────────────────────────────────────
+
+.dsaas-footer {
+  border-top: 1px solid var(--cds-border-subtle-01);
+  padding-top: var(--cds-spacing-07);
+  padding-bottom: var(--cds-spacing-07);
+  background-color: var(--cds-layer-01);
+}
+
+.dsaas-footer__text {
+  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cds-text-secondary);
+}
+
+.dsaas-footer__nav {
+  display: flex;
+  gap: var(--cds-spacing-06);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dsaas-footer__nav a {
+  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cds-text-secondary);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--cds-link-primary-hover);
+  }
+}
