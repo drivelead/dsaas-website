@@ -14,17 +14,22 @@ export default function ContactPage() {
         <Grid fullWidth>
           <Column lg={{ span: 10, offset: 2 }} md={8} sm={4}>
             <p className="dsaas-eyebrow">Contact</p>
-            <h1 className="cds--productive-heading-07">Start a conversation.</h1>
-            <p className="cds--body-long-02" style={{ marginTop: 'var(--cds-spacing-05)', color: 'var(--cds-text-secondary)' }}>
-              Tell us what you&apos;re working on. We&apos;ll tell you how DSAAS fits.
-            </p>
           </Column>
         </Grid>
       </section>
 
-      <section className="dsaas-contact-form">
+      <section className="dsaas-contact-body">
         <Grid fullWidth>
-          <Column lg={{ span: 8, offset: 2 }} md={8} sm={4}>
+          <Column lg={{ span: 5, offset: 2 }} md={4} sm={4}>
+            <h1 className="cds--productive-heading-06">Start a conversation.</h1>
+            <p
+              className="cds--body-long-02"
+              style={{ marginTop: 'var(--cds-spacing-06)', color: 'var(--cds-text-secondary)' }}
+            >
+              Tell us what you&apos;re working on. We&apos;ll tell you how DSAAS fits.
+            </p>
+          </Column>
+          <Column lg={7} md={4} sm={4}>
             <ContactForm />
           </Column>
         </Grid>

@@ -1,0 +1,93 @@
+@use '@carbon/react/scss/motion' as m;
+
+// ─── Card link ────────────────────────────────────────────────────────────────
+
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+// ─── Card inner ───────────────────────────────────────────────────────────────
+
+.cardInner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--cds-spacing-07);
+  background-color: var(--cds-layer-01);
+  border: 1px solid var(--cds-border-subtle-01);
+  transition-property: border-color;
+  transition-duration: m.$duration-moderate-01;
+  transition-timing-function: m.motion('standard', 'productive');
+
+  &:hover {
+    border-color: var(--cds-border-subtle-02);
+  }
+}
+
+// ─── Eyebrow ──────────────────────────────────────────────────────────────────
+
+.cardEyebrow {
+  margin-bottom: var(--cds-spacing-04);
+}
+
+// ─── Title ────────────────────────────────────────────────────────────────────
+
+.cardTitle {
+  color: var(--cds-text-primary);
+  margin-bottom: var(--cds-spacing-04);
+  transition-property: color;
+  transition-duration: m.$duration-fast-02;
+  transition-timing-function: m.motion('standard', 'productive');
+
+  .cardLink:hover & {
+    color: var(--cds-link-primary);
+  }
+}
+
+// ─── Abstract ─────────────────────────────────────────────────────────────────
+
+.cardAbstract {
+  color: var(--cds-text-secondary);
+  margin-top: auto;
+}
+
+// ─── See-all card ─────────────────────────────────────────────────────────────
+
+.seeAllInner {
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--cds-spacing-05);
+  border-style: dashed;
+
+  &:hover {
+    border-color: var(--cds-border-subtle-02);
+  }
+}
+
+.seeAllLabel {
+  color: var(--cds-text-secondary);
+  transition-property: color;
+  transition-duration: m.$duration-fast-02;
+  transition-timing-function: m.motion('standard', 'productive');
+
+  .cardLink:hover & {
+    color: var(--cds-link-primary);
+  }
+}
+
+.seeAllArrow {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: var(--cds-text-secondary);
+  transition-property: color, transform;
+  transition-duration: m.$duration-fast-02;
+  transition-timing-function: m.motion('standard', 'productive');
+
+  .cardLink:hover & {
+    color: var(--cds-link-primary);
+    transform: translateX(var(--cds-spacing-03));
+  }
+}

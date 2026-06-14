@@ -217,6 +217,11 @@
   padding-bottom: var(--cds-spacing-13);
 }
 
+.dsaas-contact-body {
+  padding-top: var(--cds-spacing-09);
+  padding-bottom: var(--cds-spacing-13);
+}
+
 .dsaas-form-field + .dsaas-form-field {
   margin-top: var(--cds-spacing-06);
 }
@@ -235,23 +240,43 @@
 
 .dsaas-footer {
   border-top: 1px solid var(--cds-border-subtle-01);
-  padding-top: var(--cds-spacing-07);
-  padding-bottom: var(--cds-spacing-07);
+  padding-top: var(--cds-spacing-09);
+  padding-bottom: var(--cds-spacing-09);
   background-color: var(--cds-layer-01);
 }
 
-.dsaas-footer__text {
+.dsaas-footer__wordmark {
+  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-size: var(--cds-productive-heading-03-font-size, 1.25rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cds-text-primary);
+  margin-bottom: var(--cds-spacing-03);
+}
+
+.dsaas-footer__tagline {
+  font-size: var(--cds-body-short-01-font-size, 0.875rem);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
+  color: var(--cds-text-secondary);
+  margin-bottom: var(--cds-spacing-06);
+}
+
+.dsaas-footer__copyright {
   font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
   font-size: var(--cds-label-01-font-size, 0.75rem);
-  line-height: var(--cds-label-01-line-height, 1.33333);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--cds-text-secondary);
+  letter-spacing: 0.04em;
+  color: var(--cds-text-disabled);
+}
+
+.dsaas-footer__nav-col {
+  padding-top: var(--cds-spacing-03);
 }
 
 .dsaas-footer__nav {
   display: flex;
-  gap: var(--cds-spacing-06);
+  flex-direction: column;
+  gap: var(--cds-spacing-04);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -270,12 +295,6 @@
   }
 }
 
-.dsaas-footer__legal-row {
-  margin-top: var(--cds-spacing-06);
-  padding-top: var(--cds-spacing-05);
-  border-top: 1px solid var(--cds-border-subtle-01);
-}
-
 .dsaas-footer__legal-nav {
   display: flex;
   flex-wrap: wrap;
@@ -283,6 +302,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  padding-top: var(--cds-spacing-03);
 }
 
 .dsaas-footer__legal-nav a {
@@ -296,6 +316,115 @@
   &:hover {
     color: var(--cds-link-primary-hover);
   }
+}
+
+// ─── Band system (themed sections) ───────────────────────────────────────────
+
+.dsaas-band {
+  background-color: var(--cds-background);
+}
+
+// ─── Pull-quote / continuum band ─────────────────────────────────────────────
+
+.dsaas-pull-quote {
+  font-family: var(--font-plex-serif), 'IBM Plex Serif', serif;
+  font-size: var(--cds-productive-heading-05-font-size, 1.75rem);
+  line-height: var(--cds-productive-heading-05-line-height, 2.25rem);
+  font-weight: 300;
+  color: var(--cds-text-primary);
+  margin-bottom: var(--cds-spacing-08);
+}
+
+// ─── Discipline tile grid (Home approach brief) ───────────────────────────────
+
+.dsaas-tile-grid {
+  margin-top: var(--cds-spacing-08);
+  margin-bottom: var(--cds-spacing-08);
+}
+
+.dsaas-discipline-tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 16rem;
+  gap: var(--cds-spacing-04);
+  padding: var(--cds-spacing-06);
+}
+
+.dsaas-discipline-tile__icon {
+  margin-bottom: var(--cds-spacing-02);
+  color: var(--cds-icon-secondary);
+}
+
+.dsaas-discipline-tile__area {
+  margin-top: var(--cds-spacing-02);
+}
+
+.dsaas-discipline-tile__short {
+  color: var(--cds-text-secondary);
+  margin-top: auto;
+}
+
+// ─── Home insights band ───────────────────────────────────────────────────────
+
+.dsaas-insights-band__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--cds-spacing-04);
+  margin-bottom: var(--cds-spacing-07);
+  padding-bottom: var(--cds-spacing-05);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+}
+
+.dsaas-insights-band__all-link {
+  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cds-text-secondary);
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    color: var(--cds-link-primary-hover);
+  }
+}
+
+// ─── Approach in-page nav ─────────────────────────────────────────────────────
+
+.dsaas-approach-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cds-spacing-03) var(--cds-spacing-07);
+  padding-top: var(--cds-spacing-05);
+  padding-bottom: var(--cds-spacing-05);
+  border-top: 1px solid var(--cds-border-subtle-01);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+  margin-bottom: var(--cds-spacing-10);
+}
+
+.dsaas-approach-nav__link {
+  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cds-text-secondary);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--cds-link-primary-hover);
+  }
+}
+
+// ─── Approach alternating discipline sections ─────────────────────────────────
+
+.dsaas-discipline-icon-col {
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--cds-spacing-02);
+  color: var(--cds-icon-secondary);
 }
 
 // ─── Observation section (Home) ───────────────────────────────────────────────
@@ -485,6 +614,7 @@
 }
 
 .dsaas-area-article__title {
+  font-family: var(--font-plex-serif), 'IBM Plex Serif', serif;
   color: var(--cds-text-primary);
   margin-bottom: var(--cds-spacing-02);
   transition: color 70ms ease;

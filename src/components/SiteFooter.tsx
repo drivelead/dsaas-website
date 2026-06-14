@@ -22,11 +22,16 @@ export function SiteFooter() {
   return (
     <footer className="dsaas-footer">
       <Grid fullWidth>
-        <Column lg={8} md={4} sm={4}>
-          <p className="dsaas-footer__text">DSAAS &copy; {year}</p>
+        {/* Wordmark + tagline + copyright */}
+        <Column lg={4} md={8} sm={4}>
+          <p className="dsaas-footer__wordmark">DSAAS</p>
+          <p className="dsaas-footer__tagline">Brand consistency, governed at scale.</p>
+          <p className="dsaas-footer__copyright">&copy; {year}</p>
         </Column>
-        <Column lg={8} md={4} sm={4}>
-          <nav aria-label="Footer navigation">
+
+        {/* Site navigation */}
+        <Column lg={4} md={4} sm={4}>
+          <nav aria-label="Footer navigation" className="dsaas-footer__nav-col">
             <ul className="dsaas-footer__nav">
               {mainNav.map((item) => (
                 <li key={item.href}>
@@ -36,18 +41,18 @@ export function SiteFooter() {
             </ul>
           </nav>
         </Column>
-        <Column lg={16} md={8} sm={4}>
-          <div className="dsaas-footer__legal-row">
-            <nav aria-label="Legal and policy pages">
-              <ul className="dsaas-footer__legal-nav">
-                {legalNav.map((item) => (
-                  <li key={item.href}>
-                    <Link href={item.href}>{item.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
+
+        {/* Legal navigation */}
+        <Column lg={8} md={4} sm={4}>
+          <nav aria-label="Legal and policy pages" className="dsaas-footer__nav-col">
+            <ul className="dsaas-footer__legal-nav">
+              {legalNav.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href}>{item.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </Column>
       </Grid>
     </footer>
