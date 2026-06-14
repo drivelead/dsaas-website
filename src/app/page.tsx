@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Grid, Column, ClickableTile, Button } from '@carbon/react';
+import { Grid, Column, Button, ClickableTile } from '@carbon/react';
 import { ThemeSection } from '@/components/ThemeSection';
 import { DisciplineIcon, type DisciplineKey } from '@/components/DisciplineIcon';
 import { HomeInsightsCarousel, type InsightSlide } from '@/components/HomeInsightsCarousel';
@@ -108,24 +108,20 @@ export default function HomePage() {
           </Column>
           <Column lg={{ span: 12, offset: 2 }} md={8} sm={4}>
             <div className="dsaas-tile-grid">
-              <Grid>
-                {homeDisciplines.map((d) => (
-                  <Column key={d.anchor} lg={8} md={4} sm={4}>
-                    <ClickableTile href={`/approach#${d.anchor}`}>
-                      <div className="dsaas-discipline-tile">
-                        <div className="dsaas-discipline-tile__icon">
-                          <DisciplineIcon discipline={d.anchor} size={32} />
-                        </div>
-                        <p className="dsaas-eyebrow">{d.disciplineLabel}</p>
-                        <p className="cds--productive-heading-03 dsaas-discipline-tile__area">
-                          {d.areaLabel}
-                        </p>
-                        <p className="cds--body-long-01 dsaas-discipline-tile__short">{d.short}</p>
-                      </div>
-                    </ClickableTile>
-                  </Column>
-                ))}
-              </Grid>
+              {homeDisciplines.map((d) => (
+                <ClickableTile key={d.anchor} href={`/approach#${d.anchor}`}>
+                  <div className="dsaas-discipline-tile">
+                    <div className="dsaas-discipline-tile__icon">
+                      <DisciplineIcon discipline={d.anchor} size={32} />
+                    </div>
+                    <p className="dsaas-eyebrow">{d.disciplineLabel}</p>
+                    <p className="cds--productive-heading-03 dsaas-discipline-tile__area">
+                      {d.areaLabel}
+                    </p>
+                    <p className="cds--body-long-01 dsaas-discipline-tile__short">{d.short}</p>
+                  </div>
+                </ClickableTile>
+              ))}
             </div>
             <div className="dsaas-approach-brief__cta">
               <Button kind="secondary" href="/approach">

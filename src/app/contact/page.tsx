@@ -29,7 +29,7 @@ export default function ContactPage() {
               Tell us what you&apos;re working on. We&apos;ll tell you how DSAAS fits.
             </p>
           </Column>
-          <Column lg={7} md={4} sm={4}>
+          <Column lg={7} md={4} sm={4} className="dsaas-contact-form-col">
             <ContactForm />
           </Column>
         </Grid>
