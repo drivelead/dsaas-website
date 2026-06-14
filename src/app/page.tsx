@@ -115,10 +115,6 @@ export default function HomePage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logos/pwc.svg" alt="PwC" className="dsaas-trusted-by__logo" height={36} />
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/dga.svg" alt="Digital Government Authority" className="dsaas-trusted-by__logo" height={36} />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/matarat.svg" alt="Matarat" className="dsaas-trusted-by__logo" height={36} />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logos/ford.svg" alt="Ford" className="dsaas-trusted-by__logo" height={48} />
             </div>
           </Column>
