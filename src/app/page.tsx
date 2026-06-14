@@ -98,6 +98,27 @@ export default function HomePage() {
         </Grid>
       </ThemeSection>
 
+      {/* ── 2b. Trusted by (white) ───────────────────────────────────────── */}
+      <ThemeSection theme="white" className="dsaas-trusted-by">
+        <Grid fullWidth>
+          <Column lg={{ span: 12, offset: 2 }} md={8} sm={4}>
+            <p className="dsaas-eyebrow dsaas-trusted-by__label">Trusted by</p>
+            <div className="dsaas-trusted-by__logos">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logos/nhs.svg" alt="NHS" className="dsaas-trusted-by__logo" height={36} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logos/govuk.svg" alt="GOV.UK" className="dsaas-trusted-by__logo" height={36} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logos/palantir.svg" alt="Palantir" className="dsaas-trusted-by__logo" height={36} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logos/hpe.svg" alt="HPE" className="dsaas-trusted-by__logo" height={36} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logos/pwc.svg" alt="PwC" className="dsaas-trusted-by__logo" height={36} />
+            </div>
+          </Column>
+        </Grid>
+      </ThemeSection>
+
       {/* ── 3. Approach brief + 4-up tile grid (g100) ────────────────────── */}
       <ThemeSection theme="g100" className="dsaas-approach-brief">
         <Grid fullWidth>
