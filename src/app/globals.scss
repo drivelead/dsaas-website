@@ -210,7 +210,7 @@ body {
 
 // IBM Plex Serif applied only within Perspective article headings
 .dsaas-article__title {
-  font-family: var(--font-plex-serif), 'IBM Plex Serif', serif;
+  font-family: var(--font-domine), 'Domine', serif;
   color: var(--cds-text-primary);
   margin-bottom: var(--cds-spacing-05);
 }
@@ -372,7 +372,7 @@ body {
 // ─── Pull-quote / continuum band ─────────────────────────────────────────────
 
 .dsaas-pull-quote {
-  font-family: var(--font-plex-serif), 'IBM Plex Serif', serif;
+  font-family: var(--font-domine), 'Domine', serif;
   font-size: var(--cds-productive-heading-05-font-size, 1.75rem);
   line-height: var(--cds-productive-heading-05-line-height, 2.25rem);
   font-weight: 300;
@@ -694,7 +694,7 @@ body {
 }
 
 .dsaas-area-article__title {
-  font-family: var(--font-plex-serif), 'IBM Plex Serif', serif;
+  font-family: var(--font-domine), 'Domine', serif;
   color: var(--cds-text-primary);
   margin-bottom: var(--cds-spacing-02);
   transition: color 70ms ease;

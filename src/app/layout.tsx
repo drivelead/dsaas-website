@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Open_Sans, JetBrains_Mono, IBM_Plex_Serif } from 'next/font/google';
+import { Open_Sans, JetBrains_Mono, Domine } from 'next/font/google';
 import './globals.scss';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
@@ -16,10 +16,10 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
-const plexSerif = IBM_Plex_Serif({
+const domine = Domine({
   subsets: ['latin'],
-  weight: ['300', '400'],
-  variable: '--font-plex-serif',
+  weight: ['400', '700'],
+  variable: '--font-domine',
   display: 'swap',
 });
 
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${openSans.variable} ${jetbrainsMono.variable} ${plexSerif.variable}`}
+      className={`${openSans.variable} ${jetbrainsMono.variable} ${domine.variable}`}
     >
       <body data-carbon-theme="g100">
         <SiteHeader />
