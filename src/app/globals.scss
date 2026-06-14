@@ -29,25 +29,39 @@
 }
 
 // ─── Font overrides ───────────────────────────────────────────────────────────
-// IBM Plex Mono: navigation labels, eyebrows, metadata, footer
-// Applied via CSS custom property injected by next/font/google
+// Open Sans replaces IBM Plex Sans as the primary typeface site-wide.
+// JetBrains Mono replaces IBM Plex Mono for all uppercase/label contexts.
+// IBM Plex Serif is retained for pull-quotes and Perspective article titles.
+
+html,
+body {
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
+}
+
+// Wordmark in header — Open Sans bold, generous tracking
+.cds--header__name {
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
 
 .cds--header__nav-item--link,
 .cds--header__menu-item {
-  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
   text-transform: uppercase;
   letter-spacing: var(--cds-label-letter-spacing, 0.05em);
 }
 
 .cds--side-nav__link-text {
-  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
   text-transform: uppercase;
   letter-spacing: var(--cds-label-letter-spacing, 0.05em);
 }
 
 // Utility classes for eyebrows and metadata throughout the site
 .dsaas-eyebrow {
-  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: var(--cds-label-01-font-size, 0.75rem);
@@ -223,7 +237,7 @@
 }
 
 .dsaas-footnote-label {
-  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
   font-size: var(--cds-label-01-font-size, 0.75rem);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -277,10 +291,10 @@
 }
 
 .dsaas-footer__wordmark {
-  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: var(--cds-productive-heading-03-font-size, 1.25rem);
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cds-text-primary);
   margin-bottom: var(--cds-spacing-03);
@@ -294,7 +308,7 @@
 }
 
 .dsaas-footer__copyright {
-  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
   font-size: var(--cds-label-01-font-size, 0.75rem);
   letter-spacing: 0.04em;
   color: var(--cds-text-disabled);
@@ -314,7 +328,7 @@
 }
 
 .dsaas-footer__nav a {
-  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
   font-size: var(--cds-label-01-font-size, 0.75rem);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -337,7 +351,7 @@
 }
 
 .dsaas-footer__legal-nav a {
-  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
   font-size: var(--cds-label-01-font-size, 0.75rem);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -416,7 +430,7 @@
 }
 
 .dsaas-insights-band__all-link {
-  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
   font-size: var(--cds-label-01-font-size, 0.75rem);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -443,7 +457,7 @@
 }
 
 .dsaas-approach-nav__link {
-  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
   font-size: var(--cds-label-01-font-size, 0.75rem);
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -501,7 +515,7 @@
 
 .dsaas-discipline-brief-item__label {
   display: block;
-  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
   font-size: var(--cds-label-01-font-size, 0.75rem);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -571,7 +585,7 @@
 }
 
 .dsaas-insight-entry__area-link {
-  font-family: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
   font-size: var(--cds-label-01-font-size, 0.75rem);
   text-transform: uppercase;
   letter-spacing: 0.05em;

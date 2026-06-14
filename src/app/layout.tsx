@@ -1,13 +1,18 @@
 import type { Metadata } from 'next';
-import { IBM_Plex_Mono, IBM_Plex_Serif } from 'next/font/google';
+import { Open_Sans, JetBrains_Mono, IBM_Plex_Serif } from 'next/font/google';
 import './globals.scss';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 
-const plexMono = IBM_Plex_Mono({
+const openSans = Open_Sans({
   subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-plex-mono',
+  variable: '--font-open-sans',
+  display: 'swap',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
   display: 'swap',
 });
 
@@ -29,7 +34,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${plexMono.variable} ${plexSerif.variable}`}>
+    <html
+      lang="en"
+      className={`${openSans.variable} ${jetbrainsMono.variable} ${plexSerif.variable}`}
+    >
       <body data-carbon-theme="g100">
         <SiteHeader />
         <main className="dsaas-page">{children}</main>
