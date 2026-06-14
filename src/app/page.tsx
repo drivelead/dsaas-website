@@ -114,6 +114,8 @@ export default function HomePage() {
               <img src="/logos/hpe.svg" alt="HPE" className="dsaas-trusted-by__logo" height={36} />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logos/pwc.svg" alt="PwC" className="dsaas-trusted-by__logo" height={36} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logos/dga.svg" alt="Digital Government Authority" className="dsaas-trusted-by__logo" height={36} />
             </div>
           </Column>
         </Grid>
