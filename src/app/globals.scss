@@ -506,21 +506,23 @@ body {
   opacity: 0.5;
 }
 
-.dsaas-trusted-by__logos {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--cds-spacing-08) var(--cds-spacing-09);
+.dsaas-marquee {
+  overflow: hidden;
+  width: 100%;
 }
 
-.dsaas-trusted-by__logo {
-  width: auto;
-  opacity: 0.8;
-  transition: opacity 0.2s ease;
+.dsaas-marquee__track {
+  display: flex;
+  align-items: center;
+  gap: var(--cds-spacing-10);
+  width: max-content;
+  padding: 0 var(--cds-spacing-07);
+}
 
-  &:hover {
-    opacity: 1;
-  }
+.dsaas-marquee__logo {
+  flex-shrink: 0;
+  width: auto;
+  opacity: 0.75;
 }
 
 // ─── Approach brief (Home) ────────────────────────────────────────────────────

@@ -3,6 +3,7 @@ import { Grid, Column, Button, ClickableTile } from '@carbon/react';
 import { ThemeSection } from '@/components/ThemeSection';
 import { DisciplineIcon, type DisciplineKey } from '@/components/DisciplineIcon';
 import { HomeInsightsCarousel, type InsightSlide } from '@/components/HomeInsightsCarousel';
+import { LogoMarquee } from '@/components/LogoMarquee';
 import { articles, areaGroups, getArticleBySlug } from '@/data/articles';
 
 export const metadata: Metadata = {
@@ -103,28 +104,9 @@ export default function HomePage() {
         <Grid fullWidth>
           <Column lg={{ span: 12, offset: 2 }} md={8} sm={4}>
             <p className="dsaas-eyebrow dsaas-trusted-by__label">Trusted by</p>
-            <div className="dsaas-trusted-by__logos">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/nhs.svg" alt="NHS" className="dsaas-trusted-by__logo" height={36} />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/govuk.svg" alt="GOV.UK" className="dsaas-trusted-by__logo" height={36} />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/palantir.svg" alt="Palantir" className="dsaas-trusted-by__logo" height={36} />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/hpe.svg" alt="HPE" className="dsaas-trusted-by__logo" height={36} />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/pwc.svg" alt="PwC" className="dsaas-trusted-by__logo" height={36} />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/ford.svg" alt="Ford" className="dsaas-trusted-by__logo" height={48} />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/tfl.svg" alt="Transport for London" className="dsaas-trusted-by__logo" height={36} />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/barclays.svg" alt="Barclays" className="dsaas-trusted-by__logo" height={36} />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/aviva.svg" alt="Aviva" className="dsaas-trusted-by__logo" height={36} />
-            </div>
           </Column>
         </Grid>
+        <LogoMarquee />
       </ThemeSection>
 
       {/* ── 3. Approach brief + 4-up tile grid (g100) ────────────────────── */}
