@@ -26,6 +26,12 @@
   --cds-spacing-11: 5rem;
   --cds-spacing-12: 6rem;
   --cds-spacing-13: 10rem;
+
+  // ─── Brand accent ──────────────────────────────────────────────────────────
+  --dsaas-accent: #c5ff00;
+  --dsaas-accent-hover: #addf00;
+  --dsaas-accent-active: #99cc00;
+  --dsaas-accent-text: #000000;
 }
 
 // ─── Font overrides ───────────────────────────────────────────────────────────
@@ -69,6 +75,28 @@ body {
   font-weight: var(--cds-label-01-font-weight, 400);
   color: var(--cds-text-secondary);
   margin-bottom: var(--cds-spacing-04);
+}
+
+// ─── Brand accent: primary button override ────────────────────────────────────
+
+.cds--btn--primary {
+  background-color: var(--dsaas-accent);
+  color: var(--dsaas-accent-text);
+  border-color: var(--dsaas-accent);
+
+  &:hover {
+    background-color: var(--dsaas-accent-hover);
+    border-color: var(--dsaas-accent-hover);
+  }
+
+  &:active {
+    background-color: var(--dsaas-accent-active);
+    border-color: var(--dsaas-accent-active);
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 1px var(--dsaas-accent), inset 0 0 0 2px var(--dsaas-accent-text);
+  }
 }
 
 // ─── Page structure ───────────────────────────────────────────────────────────
@@ -404,7 +432,7 @@ body {
 
 .dsaas-discipline-tile__icon {
   margin-bottom: var(--cds-spacing-03);
-  color: var(--cds-icon-secondary);
+  color: var(--dsaas-accent);
 }
 
 .dsaas-discipline-tile__area {
@@ -475,7 +503,7 @@ body {
   display: flex;
   align-items: flex-start;
   padding-top: var(--cds-spacing-02);
-  color: var(--cds-icon-secondary);
+  color: var(--dsaas-accent);
 }
 
 // ─── Observation section (Home) ───────────────────────────────────────────────
