@@ -1,13 +1,19 @@
-import { SearchLocate, ChartRelationship, Code, Renew } from '@carbon/icons-react';
-import type { CarbonIconType } from '@carbon/icons-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faMagnifyingGlassChart,
+  faDiagramSubtask,
+  faPenRuler,
+  faShieldHalved,
+} from '@fortawesome/pro-regular-svg-icons';
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 export type DisciplineKey = 'understand' | 'define' | 'build' | 'keep';
 
-const iconMap: Record<DisciplineKey, CarbonIconType> = {
-  understand: SearchLocate,
-  define: ChartRelationship,
-  build: Code,
-  keep: Renew,
+const iconMap: Record<DisciplineKey, IconDefinition> = {
+  understand: faMagnifyingGlassChart,
+  define: faDiagramSubtask,
+  build: faPenRuler,
+  keep: faShieldHalved,
 };
 
 interface DisciplineIconProps {
@@ -16,6 +22,5 @@ interface DisciplineIconProps {
 }
 
 export function DisciplineIcon({ discipline, size = 32 }: DisciplineIconProps) {
-  const Icon = iconMap[discipline];
-  return <Icon size={size} />;
+  return <FontAwesomeIcon icon={iconMap[discipline]} width={size} height={size} />;
 }

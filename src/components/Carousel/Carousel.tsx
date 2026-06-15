@@ -18,8 +18,12 @@ import {
   type ValueAnimationTransition,
 } from 'framer-motion';
 import { Button } from '@carbon/react';
-import { ArrowLeft, ArrowRight } from '@carbon/icons-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/pro-regular-svg-icons';
 import styles from './Carousel.module.scss';
+
+const FAArrowLeft = () => <FontAwesomeIcon icon={faArrowLeft} />;
+const FAArrowRight = () => <FontAwesomeIcon icon={faArrowRight} />;
 
 // ─── Spring config ────────────────────────────────────────────────────────────
 
@@ -194,7 +198,7 @@ export function Carousel<T,>({
             size="sm"
             hasIconOnly
             iconDescription="Previous"
-            renderIcon={ArrowLeft}
+            renderIcon={FAArrowLeft}
             onClick={() => goToIndex(currentIndex - 1)}
             disabled={isAtStart}
             aria-disabled={isAtStart}
@@ -204,7 +208,7 @@ export function Carousel<T,>({
             size="sm"
             hasIconOnly
             iconDescription="Next"
-            renderIcon={ArrowRight}
+            renderIcon={FAArrowRight}
             onClick={() => goToIndex(currentIndex + 1)}
             disabled={isAtEnd}
             aria-disabled={isAtEnd}
