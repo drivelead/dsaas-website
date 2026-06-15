@@ -32,6 +32,15 @@
   --dsaas-accent-hover: #addf00;
   --dsaas-accent-active: #99cc00;
   --dsaas-accent-text: #000000;
+
+  // ─── Neutralise Carbon's IBM Blue ──────────────────────────────────────────
+  // Replace every blue token with monochrome equivalents so no stray blue
+  // appears on hover, focus, or interactive states.
+  --cds-interactive: #ffffff;
+  --cds-focus: var(--dsaas-accent);
+  --cds-link-primary: var(--cds-text-secondary);
+  --cds-link-primary-hover: var(--cds-text-primary);
+  --cds-border-interactive: var(--cds-border-subtle-01);
 }
 
 // ─── Font overrides ───────────────────────────────────────────────────────────
@@ -80,13 +89,13 @@ strong, b {
   font-style: italic;
   font-size: 2rem;
   letter-spacing: -0.07em;
-  color: var(--cds-text-primary);
+  color: #ffffff;
   text-decoration: none;
   white-space: nowrap;
 
   &:hover {
     background-color: var(--cds-layer-hover-01);
-    color: var(--cds-text-primary);
+    color: #ffffff;
   }
 }
 
@@ -113,6 +122,26 @@ strong, b {
   font-weight: var(--cds-label-01-font-weight, 400);
   color: var(--cds-text-secondary);
   margin-bottom: var(--cds-spacing-04);
+}
+
+// ─── Ghost button — monochrome icon colour ────────────────────────────────────
+
+.cds--btn--ghost {
+  color: var(--cds-text-secondary);
+
+  &:hover {
+    color: var(--cds-text-primary);
+  }
+
+  svg {
+    fill: currentColor;
+  }
+}
+
+// ─── Clickable tile — no blue hover border ────────────────────────────────────
+
+.cds--tile--clickable:hover {
+  border-color: var(--cds-border-strong-01);
 }
 
 // ─── Brand accent: primary button override ────────────────────────────────────
@@ -170,6 +199,7 @@ strong, b {
 }
 
 .dsaas-hero__subline {
+  font-weight: 400;
   color: var(--cds-text-secondary);
   max-width: 40rem;
   margin-bottom: var(--cds-spacing-09);
