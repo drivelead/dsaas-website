@@ -1,12 +1,25 @@
 import type { Metadata } from 'next';
-import { Open_Sans, JetBrains_Mono, Domine } from 'next/font/google';
+import localFont from 'next/font/local';
+import { JetBrains_Mono, Domine } from 'next/font/google';
 import './globals.scss';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 
-const openSans = Open_Sans({
-  subsets: ['latin'],
-  variable: '--font-open-sans',
+const roobert = localFont({
+  src: [
+    { path: '../../public/fonts/Roobert-TRIAL-Regular.woff2', weight: '400', style: 'normal' },
+    { path: '../../public/fonts/Roobert-TRIAL-Medium.woff2', weight: '500', style: 'normal' },
+    { path: '../../public/fonts/Roobert-TRIAL-SemiBold.woff2', weight: '600', style: 'normal' },
+  ],
+  variable: '--font-roobert',
+  display: 'swap',
+});
+
+const roobertMono = localFont({
+  src: [
+    { path: '../../public/fonts/RoobertMono-TRIAL-HeavyItalic.woff2', weight: '900', style: 'italic' },
+  ],
+  variable: '--font-roobert-mono',
   display: 'swap',
 });
 
@@ -36,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${openSans.variable} ${jetbrainsMono.variable} ${domine.variable}`}
+      className={`${roobert.variable} ${roobertMono.variable} ${jetbrainsMono.variable} ${domine.variable}`}
     >
       <body data-carbon-theme="g100">
         <SiteHeader />

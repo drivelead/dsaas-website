@@ -35,21 +35,41 @@
 }
 
 // ─── Font overrides ───────────────────────────────────────────────────────────
-// Open Sans replaces IBM Plex Sans as the primary typeface site-wide.
-// JetBrains Mono replaces IBM Plex Mono for all uppercase/label contexts.
-// IBM Plex Serif is retained for pull-quotes and Perspective article titles.
+// Roobert is the primary typeface: 400 body, 500 emphasis, 600 headings.
+// RoobertMono HeavyItalic (900i) is used exclusively for the DSAAS wordmark.
+// JetBrains Mono is retained for eyebrows, nav labels, and code contexts.
+// Domine is retained for pull-quotes and Perspective article titles.
 
 html,
 body {
-  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
+  font-family: var(--font-roobert), 'Roobert', sans-serif;
+  font-weight: 400;
 }
 
-// Wordmark in header — Open Sans bold, generous tracking
+// Headings — SemiBold across the board
+h1, h2, h3, h4, h5, h6,
+.cds--productive-heading-01,
+.cds--productive-heading-02,
+.cds--productive-heading-03,
+.cds--productive-heading-04,
+.cds--productive-heading-05,
+.cds--productive-heading-06,
+.cds--productive-heading-07 {
+  font-weight: 600;
+}
+
+// Inline emphasis — Medium
+strong, b {
+  font-weight: 500;
+  font-style: normal;
+}
+
+// Wordmark — RoobertMono HeavyItalic, header only
 .cds--header__name {
-  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-family: var(--font-roobert-mono), 'RoobertMono', monospace;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0.04em;
 }
 
 .cds--header__nav-item--link,
@@ -319,11 +339,11 @@ body {
 }
 
 .dsaas-footer__wordmark {
-  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
+  font-family: var(--font-roobert-mono), 'RoobertMono', monospace;
   font-size: var(--cds-productive-heading-03-font-size, 1.25rem);
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0.04em;
   color: var(--cds-text-primary);
   margin-bottom: var(--cds-spacing-03);
 }
