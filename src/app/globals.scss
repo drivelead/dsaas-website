@@ -694,6 +694,36 @@ body {
   color: var(--cds-text-secondary);
 }
 
+.dsaas-service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: var(--cds-spacing-07);
+  display: flex;
+  flex-direction: column;
+  gap: var(--cds-spacing-03);
+}
+
+.dsaas-service-list__item {
+  font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: 0.04em;
+  color: var(--cds-text-secondary);
+  padding-left: var(--cds-spacing-05);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.45em;
+    width: 4px;
+    height: 4px;
+    background-color: var(--dsaas-accent);
+  }
+}
+
 // ─── Perspective grouped sections ─────────────────────────────────────────────
 
 .dsaas-area-section {

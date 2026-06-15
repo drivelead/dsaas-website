@@ -23,6 +23,15 @@ const disciplines = [
     short:
       'Before anything changes, we establish where the brand holds together, where it has fragmented, and why.',
     body: 'An audit maps the current state against the standard: where components diverge, where documentation has gone stale, and where teams have quietly built their own versions because the original was too hard to find or too slow to extend.',
+    services: [
+      'Design system and component audits',
+      'Brand consistency reviews across digital estates',
+      'Accessibility audits against WCAG and sector standards',
+      'Governance and ownership gap analysis',
+      'Documentation and specification review',
+      'Multi-vendor and multi-agency consistency mapping',
+      'Usability and interaction reviews',
+    ],
   },
   {
     id: 'define' as DisciplineKey,
@@ -31,6 +40,15 @@ const disciplines = [
     short:
       'Who owns the standard. How decisions are made. How exceptions are handled. This is the operating model that makes consistency durable.',
     body: 'Most design systems fail not because the components are wrong, but because no one is responsible for keeping them right. We define that responsibility: who approves changes, how requests are raised, and what happens when a team needs to deviate.',
+    services: [
+      'Design system governance frameworks',
+      'Ownership and decision-making models',
+      'Contribution and change-request processes',
+      'Versioning and release policies',
+      'Exception and deviation policies',
+      'Vendor and supplier standards',
+      'Cross-department adoption frameworks',
+    ],
   },
   {
     id: 'build' as DisciplineKey,
@@ -39,6 +57,15 @@ const disciplines = [
     short:
       'The system itself: components, patterns, tokens, documentation. Technology-agnostic, ready for any delivery team to implement.',
     body: 'Built from how people actually use interfaces, not how a platform assumes they will. Every component is specified clearly enough for any delivery team, in any stack, to implement without guesswork.',
+    services: [
+      'Component and pattern libraries',
+      'Design token definition',
+      'Accessible, technology-agnostic component specification',
+      'Interaction design and prototyping support',
+      'Design-to-development specifications',
+      'Usage documentation and guidelines',
+      'Responsive and cross-platform system design',
+    ],
   },
   {
     id: 'keep' as DisciplineKey,
@@ -47,6 +74,15 @@ const disciplines = [
     short:
       'The standard is adopted across teams and vendors, then maintained as the organisation, channels, and context evolve.',
     body: 'Adoption is supported directly, through training, reviews, and a clear channel for questions. Custodianship means the standard keeps working as new teams, new vendors, and new tools arrive.',
+    services: [
+      'Ongoing system maintenance and updates',
+      'Training and onboarding for delivery teams',
+      'Support channels for implementation queries',
+      'Organisational change management',
+      'Adoption tracking and reporting',
+      'Component request triage',
+      'Version management and release notes',
+    ],
   },
 ];
 
@@ -106,6 +142,11 @@ export default function ApproachPage() {
                     {d.short}
                   </p>
                   <p className="cds--body-long-02 dsaas-discipline-section__body">{d.body}</p>
+                  <ul className="dsaas-service-list">
+                    {d.services.map((s) => (
+                      <li key={s} className="dsaas-service-list__item">{s}</li>
+                    ))}
+                  </ul>
                 </Column>
                 <Column lg={2} md={1} sm={4} className="dsaas-discipline-icon-col">
                   <DisciplineIcon discipline={d.id} size={40} />
@@ -124,6 +165,11 @@ export default function ApproachPage() {
                     {d.short}
                   </p>
                   <p className="cds--body-long-02 dsaas-discipline-section__body">{d.body}</p>
+                  <ul className="dsaas-service-list">
+                    {d.services.map((s) => (
+                      <li key={s} className="dsaas-service-list__item">{s}</li>
+                    ))}
+                  </ul>
                 </Column>
               </Grid>
             )}
