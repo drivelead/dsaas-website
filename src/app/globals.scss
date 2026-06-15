@@ -64,13 +64,30 @@ strong, b {
   font-style: normal;
 }
 
-// Wordmark — RoobertMono HeavyItalic, header only
-.cds--header__name {
+// Header height override — raised to give wordmark room
+.cds--header {
+  height: 4.5rem;
+}
+
+// Wordmark — plain anchor, RoobertMono HeavyItalic
+.dsaas-wordmark {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 var(--cds-spacing-06);
   font-family: var(--font-roobert-mono), 'RoobertMono', monospace;
   font-weight: 900;
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: -0.07em;
+  color: var(--cds-text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: var(--cds-layer-hover-01);
+    color: var(--cds-text-primary);
+  }
 }
 
 .cds--header__nav-item--link,
@@ -125,7 +142,7 @@ strong, b {
 .dsaas-page {
   min-height: 100vh;
   background-color: var(--cds-background);
-  padding-top: 3rem; // Carbon header height
+  padding-top: 4.5rem;
 }
 
 // ─── Sections ─────────────────────────────────────────────────────────────────

@@ -5,7 +5,6 @@ import {
   Header,
   HeaderContainer,
   HeaderMenuButton,
-  HeaderName,
   HeaderNavigation,
   HeaderMenuItem,
   SideNav,
@@ -40,9 +39,9 @@ export function SiteHeader() {
             onClick={onClickSideNavExpand}
             isActive={isSideNavExpanded}
           />
-          <HeaderName href="/" prefix="">
+          <a href="/" className="dsaas-wordmark">
             DSAAS
-          </HeaderName>
+          </a>
           <HeaderNavigation aria-label="DSAAS navigation">
             {navItems.map((item) => (
               <HeaderMenuItem
