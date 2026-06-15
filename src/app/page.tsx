@@ -120,6 +120,8 @@ export default function HomePage() {
               <img src="/logos/tfl.svg" alt="Transport for London" className="dsaas-trusted-by__logo" height={36} />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logos/barclays.svg" alt="Barclays" className="dsaas-trusted-by__logo" height={36} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logos/aviva.svg" alt="Aviva" className="dsaas-trusted-by__logo" height={36} />
             </div>
           </Column>
         </Grid>
