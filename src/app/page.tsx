@@ -9,7 +9,7 @@ import { articles, areaGroups, getArticleBySlug } from '@/data/articles';
 export const metadata: Metadata = {
   title: 'DSAAS',
   description:
-    'Brand consistency, governed at scale. DSAAS defines the standard and keeps it, regardless of who builds, or what they build it in.',
+    'Brand consistency, governed at scale. DSAAS defines the standard and keeps it followed, regardless of who builds, or what they build it in.',
 };
 
 const homeDisciplines = [
@@ -28,13 +28,13 @@ const homeDisciplines = [
   {
     disciplineLabel: 'Build',
     areaLabel: 'Design & Development',
-    short: 'Components, patterns, and documentation that any team can implement.',
+    short: 'Guidelines, templates, components, whatever form the standard takes.',
     anchor: 'build' as DisciplineKey,
   },
   {
     disciplineLabel: 'Keep',
-    areaLabel: 'Adoption & Custodianship',
-    short: 'Adopted, then maintained, as the organisation evolves.',
+    areaLabel: 'Compliance & Evolution',
+    short: 'Followed through approval and audit, refined through feedback.',
     anchor: 'keep' as DisciplineKey,
   },
 ];
@@ -70,8 +70,9 @@ export default function HomePage() {
               Brand consistency, governed at scale.
             </h1>
             <p className="cds--productive-heading-03 dsaas-hero__subline">
-              Every interface is an extension of your organisation. DSAAS defines the standard and
-              keeps it, regardless of who builds, or what they build it in.
+              Every touchpoint, interface, document, or deck, is an extension of your organisation.
+              DSAAS defines the standard and keeps it followed, regardless of who builds, or what
+              they build it in.
             </p>
           </Column>
         </Grid>
@@ -82,18 +83,22 @@ export default function HomePage() {
         <Grid fullWidth>
           <Column lg={{ span: 8, offset: 2 }} md={8} sm={4}>
             <p className="cds--body-long-02">
-              Building an interface has never been easier. Frameworks generate components in
-              seconds. AI tools draft entire screens from a single prompt. The barrier to entry for
-              front-end development has nearly disappeared.
+              Producing anything has never been easier. Templates generate decks in seconds. AI tools
+              draft documents, interfaces, and campaigns from a single prompt. The barrier to output
+              has nearly disappeared.
             </p>
             <p className="cds--body-long-02">
-              The barrier to consistency has not moved. Every shortcut, every new tool, every
-              well-intentioned team produces another small divergence from the standard. Across a
-              large organisation, those divergences compound.
+              The barrier to consistency has not moved. Easier production means more people
+              producing, more tools producing, and more variations of &ldquo;close enough&rdquo;
+              entering circulation. Every shortcut, every new tool, every well-intentioned team
+              produces another small divergence from the standard. Across an organisation, those
+              divergences compound.
             </p>
             <p className="cds--body-long-02 dsaas-observation__thesis">
-              A design system is the only mechanism built to keep pace. It is the discipline DSAAS
-              specialises in, and nothing else.
+              A maintained standard is the only mechanism built to keep pace. What form it takes, a
+              design system, a set of brand guidelines, a template library, or all three, depends on
+              the organisation. Defining that standard, keeping it followed, and evolving it as
+              things change is the discipline DSAAS specialises in, and nothing else.
             </p>
           </Column>
         </Grid>
@@ -148,8 +153,9 @@ export default function HomePage() {
         <Grid fullWidth>
           <Column lg={{ span: 8, offset: 2 }} md={8} sm={4}>
             <p className="dsaas-pull-quote">
-              Engage DSAAS for a single component, a complete system, or its ongoing custodianship.
-              The relationship is the same. Only the scope changes.
+              Engage DSAAS for a single template, a complete design system, or anything in between.
+              The relationship is the same, an ongoing standard, defined, followed, and refined. Only
+              the scope changes.
             </p>
           </Column>
         </Grid>

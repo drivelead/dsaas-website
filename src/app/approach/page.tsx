@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 };
 
 const introParagraphs = [
-  'Most design systems are commissioned, built, and then left to decay. Components age. Documentation falls behind. The brand drifts, department by department, vendor by vendor.',
-  'DSAAS exists to prevent that. We define the standard an organisation works to, and we maintain it, independent of the technology used to deliver it.',
-  'This is not a technical exercise. Adherence is a matter for delivery teams, in whatever stack they choose. Custodianship of the standard itself is ours.',
-  'Whether the work begins with a single component or a complete system, the relationship is built the same way: as an ongoing discipline, not a one-off delivery.',
+  'Most standards are set once and then left to decay. Guidelines fall out of date. Templates stop matching the decks people actually need. Fonts get substituted, logos get stretched, and departments quietly build their own versions because the original was too hard to find or too slow to use.',
+  'DSAAS exists to prevent that. Together with the organisation, we define the standard it works to, and help keep it current as the organisation, its tools, and its teams change.',
+  'This is not a technical exercise, and it doesn't require changing the tools already in place. Delivery teams keep using whatever stack, software, or vendor they choose. Custodianship of the standard itself is ours.',
+  'Whether the engagement starts with a single template, a set of brand guidelines, or a complete design system, the relationship is built the same way: an ongoing retainer, not a one-off delivery.',
 ];
 
 const disciplines = [
@@ -22,13 +22,14 @@ const disciplines = [
     areaLabel: 'Audit & Analysis',
     short:
       'Before anything changes, we establish where the brand holds together, where it has fragmented, and why.',
-    body: 'An audit maps the current state against the standard: where components diverge, where documentation has gone stale, and where teams have quietly built their own versions because the original was too hard to find or too slow to extend.',
+    body: 'An audit maps the current state against the standard, or against what the standard should be, if one doesn't yet exist. We look at where templates and components diverge, where documentation has gone stale, where assets are hard to find, and where teams have quietly built workarounds because the original was too hard to use.',
     services: [
       'Design system and component audits',
-      'Brand consistency reviews across digital estates',
+      'Brand guideline and template reviews',
+      'Brand consistency reviews across digital estates and document libraries',
       'Accessibility audits against WCAG and sector standards',
       'Governance and ownership gap analysis',
-      'Documentation and specification review',
+      'Documentation and asset-library review',
       'Multi-vendor and multi-agency consistency mapping',
       'Usability and interaction reviews',
     ],
@@ -38,14 +39,14 @@ const disciplines = [
     disciplineLabel: 'Define',
     areaLabel: 'Governance & Operating Model',
     short:
-      'Who owns the standard. How decisions are made. How exceptions are handled. This is the operating model that makes consistency durable.',
-    body: 'Most design systems fail not because the components are wrong, but because no one is responsible for keeping them right. We define that responsibility: who approves changes, how requests are raised, and what happens when a team needs to deviate.',
+      'Who owns the standard, how decisions get made, and how exceptions are handled. This is what makes consistency durable over time.',
+    body: 'Most standards fail not because the guidelines or components are wrong, but because no one is responsible for keeping them current. Together with the organisation, we set out that responsibility: who approves changes, how requests are raised, and what happens when a team needs to deviate.',
     services: [
-      'Design system governance frameworks',
+      'Standard and governance frameworks',
       'Ownership and decision-making models',
       'Contribution and change-request processes',
-      'Versioning and release policies',
-      'Exception and deviation policies',
+      'Versioning and release management',
+      'Exception and deviation processes',
       'Vendor and supplier standards',
       'Cross-department adoption frameworks',
     ],
@@ -55,14 +56,15 @@ const disciplines = [
     disciplineLabel: 'Build',
     areaLabel: 'Design & Development',
     short:
-      'The system itself: components, patterns, tokens, documentation. Technology-agnostic, ready for any delivery team to implement.',
-    body: 'Built from how people actually use interfaces, not how a platform assumes they will. Every component is specified clearly enough for any delivery team, in any stack, to implement without guesswork.',
+      'The standard itself, in whatever form it needs to take: guidelines, templates, components, documentation. Technology-agnostic, ready for any team or vendor to use.',
+    body: 'Built from how people actually work, the decks they present, the dashboards they check daily, the assets they need to find quickly, not from how a platform assumes they will. Whether the deliverable is a brand guideline, a presentation template, a font and asset library, or a full design system, everything is specified clearly enough for any team, in any tool, to use without guesswork.',
     services: [
+      'Brand guideline systems',
+      'Presentation and document templates',
+      'Font and asset libraries and distribution',
       'Component and pattern libraries',
       'Design token definition',
-      'Accessible, technology-agnostic component specification',
-      'Interaction design and prototyping support',
-      'Design-to-development specifications',
+      'Accessible, technology-agnostic specifications',
       'Usage documentation and guidelines',
       'Responsive and cross-platform system design',
     ],
@@ -70,17 +72,17 @@ const disciplines = [
   {
     id: 'keep' as DisciplineKey,
     disciplineLabel: 'Keep',
-    areaLabel: 'Adoption & Custodianship',
+    areaLabel: 'Compliance & Evolution',
     short:
-      'The standard is adopted across teams and vendors, then maintained as the organisation, channels, and context evolve.',
-    body: 'Adoption is supported directly, through training, reviews, and a clear channel for questions. Custodianship means the standard keeps working as new teams, new vendors, and new tools arrive.',
+      'The standard is followed through approval, review, and ongoing monitoring, and refined through what that process reveals.',
+    body: 'Adoption is supported directly: training, reviews, and a clear channel for questions. Every approval, audit, and flagged inconsistency is also information, about where delivery has drifted, and about where the standard itself needs to evolve. This isn't a phase that follows definition; it's an ongoing cycle that keeps the standard both followed and current.',
     services: [
-      'Ongoing system maintenance and updates',
-      'Training and onboarding for delivery teams',
-      'Support channels for implementation queries',
-      'Organisational change management',
+      'Ongoing reviews and approvals',
+      'Compliance audits and monitoring',
+      'Deviation flagging and resolution',
+      'Training and onboarding for delivery teams and vendors',
+      'Feedback analysis and standard revision',
       'Adoption tracking and reporting',
-      'Component request triage',
       'Version management and release notes',
     ],
   },
