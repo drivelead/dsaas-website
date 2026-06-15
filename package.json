@@ -10,7 +10,7 @@
   "dependencies": {
     "@carbon/react": "^1.71.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
-    "@fortawesome/pro-regular-svg-icons": "^6.7.2",
+    "@fortawesome/sharp-regular-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "framer-motion": "^12.40.0",
     "next": "^14.2.29",

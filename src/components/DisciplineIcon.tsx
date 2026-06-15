@@ -3,8 +3,8 @@ import {
   faMagnifyingGlassChart,
   faDiagramSubtask,
   faPenRuler,
-  faShieldHalved,
-} from '@fortawesome/pro-regular-svg-icons';
+  faShield,
+} from '@fortawesome/sharp-regular-svg-icons';
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 export type DisciplineKey = 'understand' | 'define' | 'build' | 'keep';
@@ -13,7 +13,7 @@ const iconMap: Record<DisciplineKey, IconDefinition> = {
   understand: faMagnifyingGlassChart,
   define: faDiagramSubtask,
   build: faPenRuler,
-  keep: faShieldHalved,
+  keep: faShield,
 };
 
 interface DisciplineIconProps {

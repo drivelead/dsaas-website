@@ -19,7 +19,7 @@ import {
 } from 'framer-motion';
 import { Button } from '@carbon/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/pro-regular-svg-icons';
+import { faArrowLeft, faArrowRight } from '@fortawesome/sharp-regular-svg-icons';
 import styles from './Carousel.module.scss';
 
 const FAArrowLeft = () => <FontAwesomeIcon icon={faArrowLeft} />;
