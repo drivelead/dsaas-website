@@ -117,7 +117,7 @@ export default function HomePage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logos/ford.svg" alt="Ford" className="dsaas-trusted-by__logo" height={48} />
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/ericsson.svg" alt="Ericsson" className="dsaas-trusted-by__logo" height={36} />
+              <img src="/logos/tfl.svg" alt="Transport for London" className="dsaas-trusted-by__logo" height={36} />
             </div>
           </Column>
         </Grid>
